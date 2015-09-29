@@ -1,6 +1,6 @@
 Django==1.9a1
 django-extensions
-django-mptt
+https://github.com/django-mptt/django-mptt/archive/master.zip
 django-redis-cache
 django-toolbelt
 djangorestframework
