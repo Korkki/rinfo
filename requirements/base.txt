@@ -1,0 +1,8 @@
+Django==1.9a1
+django-extensions
+django-mptt
+django-redis-cache
+django-toolbelt
+djangorestframework
+psycopg2
+whitenoise
