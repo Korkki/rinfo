@@ -40,5 +40,6 @@ urlpatterns = [
     url(r'^api/api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/token/$', obtain_auth_token),
     url(r'^admin/', admin.site.urls),
+    url(r'links/', include('links.urls')),
     url(r'$', HomeView.as_view(), name='home'),
 ]

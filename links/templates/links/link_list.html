@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for link in object_list %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="{{ link.url }}" target="_blank">{{ link.url }}</a>
+    </div>
+    <div class="panel-body">
+        {{ link.description|default:link.url }}
+    </div>
+    <div class="panel-footer">
+        <ul class="list-inline">
+            <li><i class="fa fa-folder"></i> {{ link.category }}</li>
+            {% for tag in link.tags.all %}
+                <li><i class="fa fa-tag"></i> {{ tag }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<nav>
+    <ul class="pager">
+        {% if object_list.has_previous %}
+        <li><a href="?page={{ object_list.next_page_number }}">Previous</a></li>
+        {% endif %}
+        {% if contacts.has_next %}
+        <li><a href="?page={{ object_list.previous_page_number }}">Next</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endfor %}
+{% endblock %}
