@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': '12dev34',
-        'HOST': 'localhost',
+        'HOST': 'postgres',
         'PORT': '5432',
     }
 }
@@ -98,7 +98,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.RedisCache',
-        'LOCATION': 'localhost:6379',
+        'LOCATION': 'redis:6379',
     },
 }
 
