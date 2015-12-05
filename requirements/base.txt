@@ -1,4 +1,4 @@
-Django==1.9b1
+Django==1.9
 django-extensions
 https://github.com/django-mptt/django-mptt/archive/master.zip
 django-redis-cache
